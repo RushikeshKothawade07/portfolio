@@ -11,53 +11,85 @@ import Tableau from '../assets/tableau.png';
 import PowerBI from '../assets/power bi.png';
 
 const Skills = () => {
+    const skillsList = [
+        {
+            id:1,
+            src : Python,
+            title:'PYTHON ',
+
+        },
+        {
+            id:2,
+            src : Cpp,
+            title:'C++',
+
+        },
+        {
+            id:3,
+            src : HTML,
+            title:'HTML',
+
+        },
+        {
+            id:4,
+            src : CSS,
+            title:'CSS',
+
+        },
+        {
+            id:5,
+            src : JavaScript,
+            title:'JAVASCRIPT',
+
+        },
+        {
+            id:6,
+            src : ReactImg,
+            title:'REACT',
+
+        },
+        {
+            id:7,
+            src : Tableau,
+            title:'TABLEAU',
+
+        },
+        {
+            id:8,
+            src : PowerBI,
+            title:'POWER BI',
+
+        },
+
+    ]
   return (
-    <div name='skills' className='w-full h-screen bg-[#0a192f] text-gray-300'>
+    <div name='skills' className='w-full h-screen bg-[#0a192f] text-gray-300 '>
       {/* Container */}
       <div className='max-w-[1000px] mx-auto p-4 flex flex-col justify-center w-full h-full'>
           <div>
               <p className='text-4xl font-bold inline border-b-4 border-pink-600 '>Skills</p>
-              <p className='py-4'>// These are the technologies I've worked with</p>
+              <p className='py-4'>These are the technologies I've worked with</p>
           </div>
 
-          <div className='w-full grid grid-cols-2 sm:grid-cols-4 gap-4 text-center py-8'>
-          <div className='shadow-md shadow-[#040c16] hover:scale-110 duration-500'>
-                  <img className='w-20 mx-auto' src={Python} alt="Python icon" />
-                  <p className='my-4'>PYTHON</p>
-              </div>
-              <div className='shadow-md shadow-[#040c16] hover:scale-110 duration-500'>
-                  <img className='w-20 mx-auto' src={Cpp} alt="C++ icon" />
-                  <p className='my-4'>C++</p>
-              </div>
-             
-              <div className='shadow-md shadow-[#040c16] hover:scale-110 duration-500'>
-                  <img className='w-20 mx-auto' src={HTML} alt="HTML icon" />
-                  <p className='my-4'>HTML</p>
-              </div>
-              <div className='shadow-md shadow-[#040c16] hover:scale-110 duration-500'>
-                  <img className='w-20 mx-auto' src={CSS} alt="CSS icon" />
-                  <p className='my-4'>CSS</p>
-              </div>
-              <div className='shadow-md shadow-[#040c16] hover:scale-110 duration-500'>
-                  <img className='w-20 mx-auto' src={JavaScript} alt="JavaScript icon" />
-                  <p className='my-4'>JAVASCRIPT</p>
-              </div>
-              <div className='shadow-md shadow-[#040c16] hover:scale-110 duration-500'>
-                  <img className='w-20 mx-auto' src={ReactImg} alt="React icon" />
-                  <p className='my-4'>REACT</p>
-              </div>
-              <div className='shadow-md shadow-[#040c16] hover:scale-110 duration-500'>
-                  <img className='w-20 mx-auto' src={Tableau} alt="Tableau icon" />
-                  <p className='my-4'>TABLEAU</p>
-              </div>
-              <div className='shadow-md shadow-[#040c16] hover:scale-110 duration-500'>
-                  <img className='w-20 mx-auto' src={PowerBI} alt="POWERBI icon" />
-                  <p className='my-4'>POWER BI</p>
-              </div>
+       
+
+
+          <div className="w-full grid grid-cols-2 sm:grid-cols-4 gap-8 text-center py-8 px-12 sm:px-0">
+          {skillsList.map(({ id, src, title }) => (
+            <div
+              key={id}
+              className={`shadow-md hover:scale-105 duration-500 py-2 rounded-lg`}
+            >
+              <img src={src} alt="" className="w-20 mx-auto" />
+              <p className="mt-4">{title}</p>
+            </div>
+          ))}
+        </div>
           
           </div>
       </div>
-    </div>
+ 
+    
   );
 };
 

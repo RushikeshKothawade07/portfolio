@@ -11,6 +11,11 @@ function App() {
   return (
     <div>
       <Navbar />
+
+      <br/>
+      <br/>
+      <br/>
+   
       <Home />
       <About />
       <Profiles/>
